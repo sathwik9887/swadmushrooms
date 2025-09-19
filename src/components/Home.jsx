@@ -23,9 +23,30 @@ const Home = () => {
       title: "Dry Oyster Mushroom",
     },
   ];
+  const records = [
+    {
+      id: 1,
+      img: "https://shroomery.in/cdn/shop/articles/shopify_recipe_banners_da5b2c94-fa8c-40d7-bdcc-14ed3c5bb3c6_394x.png?v=1748926981",
+    },
+    {
+      id: 2,
+      img: "https://shroomery.in/cdn/shop/articles/shopify_recipe_banners_198b3f68-cada-4ae2-a126-170e3f13b403_394x.png?v=1744201689",
+    },
+    {
+      id: 3,
+      img: "https://shroomery.in/cdn/shop/articles/shopify_recipe_banners_56cb9842-0012-428c-916f-d356a8b12e9c_394x.png?v=1743598345",
+    },
+    {
+      id: 4,
+      img: "https://res.cloudinary.com/dnv0r9sj1/image/upload/v1646718235/swadmushrooms/cook-with-us-4.png",
+    },
+  ];
 
   const [current, setCurrent] = useState(0);
+  const [showAll, setShowAll] = useState(false);
   const [selectedImage, setSelectedImage] = useState(heroImages[0]);
+
+  const visibleRecords = showAll ? records : records.slice(0, 3);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -55,7 +76,7 @@ const Home = () => {
                 .getElementById("products")
                 .scrollIntoView({ behavior: "smooth" })
             }
-            className="mt-10 bg-green-700 text-white px-6 py-3 rounded-full hover:bg-green-800 transition"
+            className="mt-10 bg-green-700 text-white px-6 py-3 rounded-sm hover:bg-green-800 transition"
           >
             Shop Now
           </button>
@@ -86,7 +107,7 @@ const Home = () => {
               </h3>
               <a
                 href="#products"
-                className="mt-4 bg-green-600 text-white lg:px-6 lg:py-2 md:px-4 md:py-1 sm:px-3 sm:py-1 px-2 py-1 rounded-full hover:bg-green-700 transition"
+                className="mt-4 bg-green-600 text-white lg:px-6 lg:py-2 md:px-4 md:py-1 sm:px-3 sm:py-1 px-2 py-1 rounded-sm hover:bg-green-700 transition"
               >
                 View All
               </a>
@@ -98,7 +119,7 @@ const Home = () => {
       <div className="flex justify-center items-center mt-2">
         <a
           href="#products"
-          className="bg-green-600 text-white py-3 px-6  hover:bg-green-700 hover:text-white transition uppercase"
+          className="bg-green-600 text-white py-3 px-6  hover:bg-green-700 hover:text-white transition uppercase rounded-sm"
         >
           View All
         </a>
@@ -166,17 +187,41 @@ const Home = () => {
               market — that of easy availability of different varieties of
               mushrooms.
             </p>
-            <a href="#" className="text-blue-600 mt-4 text-sm hover:underline">
+            <a href="/about" className="text-green-700 hover:underline">
               Read More
             </a>
           </div>
         </section>
       </div>
       <div className="max-w-full mx-auto px-4 py-10">
-        <section className="relative flex justify-center items-center py-20">
+        <section className="relative flex flex-col justify-center items-center py-20">
           <h1 className="text-center text-2xl font-lora font-semibold mb-10">
             Cook with us
           </h1>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {visibleRecords.map((item) => (
+              <div
+                key={item.id}
+                className="flex flex-col items-center justify-center"
+              >
+                <img
+                  src={item.img}
+                  alt="cook with us"
+                  className="w-full rounded-lg shadow-md"
+                />
+              </div>
+            ))}
+          </div>
+
+          {!showAll && records.length > 3 && (
+            <button
+              onClick={() => setShowAll(true)}
+              className="mt-8 bg-green-700 text-white px-6 py-2 rounded-sm hover:bg-green-800 transition"
+            >
+              View All
+            </button>
+          )}
         </section>
       </div>
     </div>
