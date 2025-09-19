@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Pickles from "../assets/swadmushrooms.png";
-import { Link } from "react-router-dom";
 
 const Home = () => {
   const heroImages = [
