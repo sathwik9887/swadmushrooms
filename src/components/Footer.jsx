@@ -20,7 +20,7 @@ const Footer = () => {
       hoverColor: "hover:text-pink-500",
     },
     {
-      href: "https://wa.me/919876543210",
+      href: "https://wa.me/918123279734",
       icon: <FaWhatsapp size={20} />,
       hoverColor: "hover:text-green-500",
     },
