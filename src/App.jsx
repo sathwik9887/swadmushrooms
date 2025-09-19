@@ -7,7 +7,8 @@ import CookieConsent from "./components/CookieConsent";
 import Home from "./components/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Testimonials from "./pages/Testimonials"; // import the page
+import Testimonials from "./pages/Testimonials";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="*" element={<NotFound />} />{" "}
         <Route path="/contact" element={<Contact />} />
         <Route path="/testimonials" element={<Testimonials />} />{" "}
       </Routes>
