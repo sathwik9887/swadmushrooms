@@ -32,30 +32,15 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          <div className="bg-white shadow-lg rounded-2xl p-4 sm:p-6 hover:shadow-2xl transition duration-300 ease-in-out">
-            <h2 className="text-xl font-semibold text-green-700 mb-4 text-center">
-              Social Highlights
-            </h2>
-            <div
-              className="tagembed-widget w-full h-[420px] rounded-xl overflow-hidden"
-              data-widget-id="301087"
-              data-website="1"
-            ></div>
-          </div>
-
-          <div className="bg-white shadow-lg rounded-2xl p-4 sm:p-6 hover:shadow-2xl transition duration-300 ease-in-out">
-            <h2 className="text-xl font-semibold text-green-700 mb-4 text-center">
-              Google Reviews
-            </h2>
-            <div
-              className="review-widget_net w-full h-100 rounded-xl overflow-hidden"
-              data-uuid="5b2bc698-75d9-4b50-8e06-14f411b374df"
-              data-template="3"
-              data-lang="en"
-              data-theme="light"
-            ></div>
-          </div>
+        <div className="bg-white shadow-lg rounded-2xl p-4 sm:p-6 hover:shadow-2xl transition duration-300 ease-in-out">
+          <h2 className="text-xl font-semibold text-green-700 mb-4 text-center">
+            Google Reviews
+          </h2>
+          <div
+            className="tagembed-widget w-full h-[420px] rounded-xl overflow-hidden"
+            data-widget-id="301087"
+            data-website="1"
+          ></div>
         </div>
       </div>
     </section>
