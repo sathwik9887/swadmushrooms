@@ -12,16 +12,17 @@ const Navbar = () => {
     { name: "About", path: "/about" },
     {
       name: "Shop",
-      path: "/shop",
+      path: "/shop/collections",
       submenu: [
         { name: "Fresh Oyster", path: "/shop/fresh-oyster" },
         { name: "Dry Oyster", path: "/shop/dry-oyster" },
         { name: "Specials", path: "/shop/specials" },
+        { name: "All Products", path: "/shop/collections" },
       ],
     },
     { name: "Products", path: "/products" },
     { name: "Recipes", path: "/recipes" },
-    { name: "Blog", path: "/blog" },
+    { name: "Blogs", path: "/blogs" },
     { name: "Contact", path: "/contact" },
     { name: "Testimonials", path: "/testimonials" },
   ];
@@ -44,7 +45,6 @@ const Navbar = () => {
                 {menu.submenu && <LuChevronDown className="ml-1" size={16} />}
               </Link>
 
-              {/* Dropdown for Shop */}
               {menu.submenu && isShopOpen && (
                 <ul className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 z-50">
                   {menu.submenu.map((sub, subIdx) => (
@@ -68,7 +68,6 @@ const Navbar = () => {
           Shop Now
         </a>
 
-        {/* Mobile Menu Button */}
         <button
           className="lg:hidden text-gray-800"
           onClick={() => setIsOpen(!isOpen)}
@@ -77,7 +76,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="lg:hidden bg-white shadow-lg w-full py-6">
           <ul className="flex flex-col items-center space-y-4 font-medium text-gray-800 font-lora">
