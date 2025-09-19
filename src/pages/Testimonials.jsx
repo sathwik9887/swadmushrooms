@@ -1,13 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 const Testimonials = () => {
-  const [reviews, setReviews] = useState([]);
-
   useEffect(() => {
-    fetch("/api/getReviews.js")
-      .then((res) => res.json())
-      .then((data) => setReviews(data))
-      .catch((err) => console.log(err));
+    const tagembedScript = document.createElement("script");
+    tagembedScript.src = "https://widget.tagembed.com/embed.min.js";
+    tagembedScript.async = true;
+    document.body.appendChild(tagembedScript);
+
+    const reviewsScript = document.createElement("script");
+    reviewsScript.src = "https://grwapi.net/widget.min.js";
+    reviewsScript.async = true;
+    document.body.appendChild(reviewsScript);
+
+    return () => {
+      document.body.removeChild(tagembedScript);
+      document.body.removeChild(reviewsScript);
+    };
   }, []);
 
   return (
@@ -20,23 +28,22 @@ const Testimonials = () => {
         See what our customers are saying about Swad Mushrooms.
       </p>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {reviews.length === 0 && (
-          <p className="text-center col-span-full">No reviews yet.</p>
-        )}
+      {/* ✅ Tagembed Widget */}
+      <div
+        className="tagembed-widget"
+        style={{ width: "100%", height: "100%", overflow: "auto" }}
+        data-widget-id="301087"
+        data-website="1"
+      ></div>
 
-        {reviews.map((review, index) => (
-          <div key={index} className="bg-white p-6 rounded-2xl shadow-md">
-            <p className="text-gray-800 mb-4">"{review.text}&quot;</p>
-            <p className="text-gray-600 font-semibold">
-              - {review.author_name}
-            </p>
-            <p className="text-yellow-500">
-              {"★".repeat(Math.round(review.rating))}
-            </p>
-          </div>
-        ))}
-      </div>
+      {/* ✅ Google Reviews Widget */}
+      <div
+        className="review-widget_net"
+        data-uuid="5b2bc698-75d9-4b50-8e06-14f411b374df"
+        data-template="3"
+        data-lang="en"
+        data-theme="light"
+      ></div>
     </div>
   );
 };
