@@ -19,32 +19,46 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12 sm:py-16 md:py-20">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-lora font-semibold mb-8 text-green-800 text-center">
-        Testimonials
-      </h1>
+    <section className="bg-gradient-to-b from-green-50 to-white py-16 sm:py-20 md:py-24">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-lora font-bold text-green-800">
+            What Our Customers Say
+          </h1>
+          <p className="text-gray-600 mt-4 text-lg max-w-2xl mx-auto">
+            Real feedback from people who love{" "}
+            <span className="font-semibold text-green-700">Swad Mushrooms</span>
+            .
+          </p>
+        </div>
 
-      <p className="text-center text-gray-700 mb-10">
-        See what our customers are saying about Swad Mushrooms.
-      </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <div className="bg-white shadow-lg rounded-2xl p-4 sm:p-6 hover:shadow-2xl transition duration-300 ease-in-out">
+            <h2 className="text-xl font-semibold text-green-700 mb-4 text-center">
+              Social Highlights
+            </h2>
+            <div
+              className="tagembed-widget w-full h-[420px] rounded-xl overflow-hidden"
+              data-widget-id="301087"
+              data-website="1"
+            ></div>
+          </div>
 
-      {/* ✅ Tagembed Widget */}
-      <div
-        className="tagembed-widget"
-        style={{ width: "100%", height: "100%", overflow: "auto" }}
-        data-widget-id="301087"
-        data-website="1"
-      ></div>
-
-      {/* ✅ Google Reviews Widget */}
-      <div
-        className="review-widget_net"
-        data-uuid="5b2bc698-75d9-4b50-8e06-14f411b374df"
-        data-template="3"
-        data-lang="en"
-        data-theme="light"
-      ></div>
-    </div>
+          <div className="bg-white shadow-lg rounded-2xl p-4 sm:p-6 hover:shadow-2xl transition duration-300 ease-in-out">
+            <h2 className="text-xl font-semibold text-green-700 mb-4 text-center">
+              Google Reviews
+            </h2>
+            <div
+              className="review-widget_net w-full h-100 rounded-xl overflow-hidden"
+              data-uuid="5b2bc698-75d9-4b50-8e06-14f411b374df"
+              data-template="3"
+              data-lang="en"
+              data-theme="light"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
