@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Testimonials = () => {
   useEffect(() => {
@@ -21,6 +22,15 @@ const Testimonials = () => {
   return (
     <section className="bg-gradient-to-b from-green-50 to-white py-16 sm:py-20 md:py-24">
       <div className="max-w-7xl mx-auto px-4">
+        <nav className="text-sm text-gray-600 mb-4">
+          <Link to="/" className="hover:underline text-green-700">
+            Home
+          </Link>{" "}
+          / <span className="text-gray-800">Testimonials</span>
+        </nav>
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-lora font-semibold mb-8 md:mb-10 text-green-800">
+          Testimonials
+        </h1>
         <div className="text-center mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-lora font-bold text-green-800">
             What Our Customers Say
