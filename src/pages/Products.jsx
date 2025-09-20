@@ -5,7 +5,7 @@ const Products = () => {
   const productList = [
     {
       id: 1,
-      name: "Fresh Oyster Mushroom",
+      name: "Oyster Mushroom Pickles",
       price: "₹200",
       img: "https://addmefoods.com/cdn/shop/files/61Kf4dCcB2L._SX679.jpg?v=1753247860",
     },
