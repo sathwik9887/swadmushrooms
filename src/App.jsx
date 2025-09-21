@@ -16,21 +16,22 @@ import Collections from "./pages/Shop/Collections";
 
 function App() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<NotFound />} />{" "}
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/products" element={<Products />} />{" "}
-        <Route path="/blogs" element={<Blogs />} />{" "}
-        <Route path="/recipes" element={<Recipes />} />{" "}
-        <Route path="/shop/collections" element={<Collections />} />
-        <Route path="/testimonials" element={<Testimonials />} />{" "}
-      </Routes>
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/recipes" element={<Recipes />} />
+          <Route path="/shop/collections" element={<Collections />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+        </Routes>
+      </main>
       <CookieConsent />
-
       <Footer />
     </div>
   );

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
 const Blogs = () => {
-  // Dummy blogs (replace with API data later)
   const blogPosts = [
     {
       id: 1,
