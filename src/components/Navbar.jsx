@@ -149,7 +149,7 @@ const Navbar = () => {
             ))}
             <a
               href="https://wa.me/918123279734"
-              className="bg-green-700 text-white px-6 py-2 rounded-full hover:bg-green-800 transition mt-4"
+              className="bg-green-700 text-white px-6 py-2 rounded-sm hover:bg-green-800 transition mt-4"
             >
               Shop Now
             </a>
