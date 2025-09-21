@@ -10,7 +10,8 @@ const Blogs = () => {
       date: "September 20, 2025",
       excerpt:
         "Discover how oyster mushrooms can boost your immunity, improve gut health, and add nutrition to your meals.",
-      image: "https://via.placeholder.com/400x250?text=Oyster+Mushrooms",
+      image:
+        "https://images.unsplash.com/photo-1611938700738-9228b326cf38?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       id: 2,
@@ -18,7 +19,8 @@ const Blogs = () => {
       date: "September 10, 2025",
       excerpt:
         "Step-by-step guide to grow your own mushrooms easily with minimal setup and care.",
-      image: "https://via.placeholder.com/400x250?text=Grow+Mushrooms",
+      image:
+        "https://images.unsplash.com/photo-1622370387370-3eec28a387c0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG95c3RlciUyMG11c2hyb29tfGVufDB8fDB8fHww",
     },
   ];
 
