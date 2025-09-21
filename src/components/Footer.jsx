@@ -47,6 +47,18 @@ const Footer = () => {
             </a>
           ))}
         </div>
+
+        <p className="text-xs text-gray-600 mt-6">
+          Designed and Developed with ❤️
+          <a
+            href="https://sathwiknayak.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-700 hover:underline"
+          >
+            By Sathwik Nayak.
+          </a>
+        </p>
       </div>
     </footer>
   );
